@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    
+    <!-- Astronomy Engine Preload -->
+    <script type="module">
+      import * as Astronomy from 'https://cdn.jsdelivr.net/npm/astronomy-engine@2.1.15/esm/index.js';
+      window.Astronomy = Astronomy;
+    </script>
+
+    <!-- Swiss Ephemeris (for Ascendant/Houses ) -->
+    <script src="https://cdn.jsdelivr.net/npm/swisseph/build/browser/swe.js"></script>
+    <script>
+      window.swe && window.swe.init && console.log('Swiss Ephemeris ready hook loaded' );
+    </script>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
